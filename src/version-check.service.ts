@@ -19,7 +19,7 @@ export class VersionCheckService {
    * @param {number} frequency - in milliseconds, defaults to 30 minutes
    */
   public initVersionCheck(frequency = 10000) {
-    const url = window.location.protocol + window.location.host;
+    const url = 'https://' + window.location.host;
     console.log('currentHash from main', this.currentHash);
     this.checkVersion(`${url}/version.json`);
     // comment below if polling is not required.
