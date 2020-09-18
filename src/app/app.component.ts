@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VersionCheckService } from 'src/version-check.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngrx-angular';
+
+  constructor(versionCheckService: VersionCheckService) {
+    versionCheckService.initVersionCheck();
+  }
 }
