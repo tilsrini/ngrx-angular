@@ -23,7 +23,7 @@ export class VersionCheckService {
     this.checkVersion(`https://myangcicd.azurewebsites.net/version.json`);
     // comment below if polling is not required.
     setInterval(() => {
-      this.checkVersion(`https://myangcicd.azurewebsites.net//version.json`);
+      this.checkVersion(`https://myangcicd.azurewebsites.net/version.json`);
     }, frequency);
   }
 
